@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  * {
+    box-sizing: border-box;
+  }
+} */
+@layer components {
+  .LayoutShopBase {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+  }
+
+  .Header {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+  }
+ 
+  .AuthLayout {
+    @apply grid min-h-screen h-full;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 1fr;
+  }
+  .GridButtoScroll {
+    @apply grid items-center;
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  } 
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  .fadeIn {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+}

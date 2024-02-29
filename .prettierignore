@@ -1,0 +1,9 @@
+.vscode/
+out/
+dist/
+test-fixtures/
+node_modules/
+coverage/
+public/
+.next/
+.env
